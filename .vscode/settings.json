@@ -1,0 +1,9 @@
+{
+  // Automatically performs null analysis to check for potential null pointer exceptions.
+  "java.compile.nullAnalysis.mode": "automatic",
+  /*
+    Prompts the user to decide whether to update the build configuration when changes are
+    detected.
+  */
+  "java.configuration.updateBuildConfiguration": "automatic"
+}
