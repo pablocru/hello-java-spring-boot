@@ -1,0 +1,3 @@
+# Launch config used by the extension
+# https://github.com/Microsoft/vscode-spring-boot-dashboard
+.vscode/launch.json
