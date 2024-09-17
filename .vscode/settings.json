@@ -5,5 +5,28 @@
     Prompts the user to decide whether to update the build configuration when changes are
     detected.
   */
-  "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  /*
+    The following words are added to the cSpell dictionary to prevent them from being
+    flagged as spelling errors. These words represent Java package names in the monorepo,
+    which follow the convention of using all lowercase letters. Since cSpell detects them
+    as incorrect due to their format, they are explicitly marked to be ignored.
+  */
+  "cSpell.words": [
+    "beanlifecyclemethods",
+    "beanscopes",
+    "componentscanning",
+    "constructorinjection",
+    "createdbtablesautomatically",
+    "createstudent",
+    "customproperties",
+    "deletestudent",
+    "helloworld",
+    "hibernatejpacrud",
+    "javaconfigbean",
+    "readstudent",
+    "setterinjection",
+    "springcore",
+    "updatestudent",
+  ],
 }
