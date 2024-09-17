@@ -20,23 +20,23 @@ public class CrudDemoDeleteStudentApplication {
         // Java Lambda Expression that works like a shortcut notation for providing an
         // implementation of the command line runner
         return runner -> {
-            // deleteStudent(studentDAO);
+            deleteStudent(studentDAO);
+            System.out.println();
 
             deleteAllStudents(studentDAO);
         };
+    }
+
+    private void deleteStudent(StudentDAO studentDAO) {
+        int studentId = 9;
+        System.out.println("Deleting student id: " + studentId);
+        studentDAO.delete(studentId);
     }
 
     private void deleteAllStudents(StudentDAO studentDAO) {
         System.out.println("Deleting all students...");
         int numRowsDeleted = studentDAO.deleteAll();
         System.out.println("Deleted row count: " + numRowsDeleted);
-    }
-
-    @SuppressWarnings("unused")
-    private void deleteStudent(StudentDAO studentDAO) {
-        int studentId = 4;
-        System.out.println("Deleting student id: " + studentId);
-        studentDAO.delete(studentId);
     }
 
 }

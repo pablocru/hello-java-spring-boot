@@ -2,10 +2,8 @@ package com.pablocru.crud_demo_read_student;
 
 import com.pablocru.crud_demo_read_student.dao.StudentDAO;
 import com.pablocru.crud_demo_read_student.entity.Student;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import java.util.List;
-
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Bean;
@@ -24,22 +22,26 @@ public class CrudDemoReadStudentApplication {
         // Java Lambda Expression that works like a shortcut notation for providing an
         // implementation of the command line runner
         return runner -> {
-            // readStudent(studentDAO);
+            readStudent(studentDAO);
+            System.out.println();
 
-            // queryForStudents(studentDAO);
+            queryForStudents(studentDAO);
+            System.out.println();
 
             queryForStudentsByLastName(studentDAO);
         };
     }
 
     private void queryForStudentsByLastName(StudentDAO studentDAO) {
-        List<Student> theStudents = studentDAO.findByLastName("Doe");
+        String lastName = "Doe";
+        System.out.println("Retrieving any student whose last name is: " + lastName);
+        List<Student> theStudents = studentDAO.findByLastName(lastName);
 
         displayStudents(theStudents);
     }
 
-    @SuppressWarnings("unused")
     private void queryForStudents(StudentDAO studentDAO) {
+        System.out.println("Retrieving all students...");
         List<Student> theStudents = studentDAO.findAll();
 
         displayStudents(theStudents);
@@ -51,7 +53,6 @@ public class CrudDemoReadStudentApplication {
         }
     }
 
-    @SuppressWarnings("unused")
     private void readStudent(StudentDAO studentDAO) {
         System.out.println("Creating new student object...");
         Student tempStudent = new Student(
