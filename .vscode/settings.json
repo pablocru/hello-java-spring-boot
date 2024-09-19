@@ -24,9 +24,11 @@
     "helloworld",
     "hibernatejpacrud",
     "javaconfigbean",
+    "jpaapi",
     "readstudent",
+    "restcrud",
     "setterinjection",
     "springcore",
-    "updatestudent",
+    "updatestudent"
   ],
 }
