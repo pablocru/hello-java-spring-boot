@@ -30,6 +30,7 @@
     "setterinjection",
     "springcore",
     "springdatajpa",
+    "springdatarest",
     "updatestudent"
   ],
 }
