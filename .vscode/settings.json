@@ -29,6 +29,7 @@
     "restcrud",
     "setterinjection",
     "springcore",
+    "springdatajpa",
     "updatestudent"
   ],
 }

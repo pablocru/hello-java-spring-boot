@@ -17,6 +17,7 @@
 
   <modules>
     <module>01-jpa-api</module>
+    <module>02-spring-data-jpa</module>
   </modules>
   <packaging>pom</packaging>
 
